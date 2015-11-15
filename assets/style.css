@@ -1,0 +1,158 @@
+body: {
+    position: relative;
+}
+
+.product img {
+    height: 135px;
+    max-height: 135px;
+    width: auto;
+    align: center;
+}
+
+.product div {
+}
+
+.product.row{
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(180, 140, 200, 0.1);
+    position: relative;
+}
+
+div.item {
+    align: center;
+}
+
+.carousel{
+    width:170px;
+    height:135px;
+    max-height:240px;
+}
+
+.carousel-inner > .item > img {
+   margin: 0 auto;
+}
+
+#deviantart-logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#deviantart-logo > svg {
+    width: 18px;
+}
+
+.description {
+    margin-bottom: 40px;
+}
+
+.productStock {
+    position: absolute;
+    right: 500px;
+    bottom: 20px;
+}
+
+.productPrice {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    align: right;
+    font-size: 20px;
+}
+
+#blog-title {
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    align-content: center;
+}
+
+.blog-entry {
+    position: relative;
+    border-top: 1px solid;
+    border-radius: 25px;
+    border-width: medium;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.blog-entry-title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.blog-entry-body {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+#gallery-area {
+    background-color: rgba(55, 10, 55, 0.1);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.gallery-row {
+    margin-bottom: 3px;
+}
+
+.gallery-entry{
+    border: 1px solid;
+    margin-right: 0px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.gallery-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    display: table;
+    position: absolute;
+    padding-top: 25%;
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    positon: relative;
+    opacity: 0;
+    visibility: hidden;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+.gallery-entry:hover .gallery-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.entry-tab {
+    border-right: solid 0px;
+}
+
+.entry-tab:hover {
+    border-right: solid 3px;
+}
+
+.a-n {
+    bottom: 5px;
+}
+
+li.tab {
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "magecap",
+  "description": "My Artist Page",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15",
+    "angular-route": "~1.4.7"
+  }
+}

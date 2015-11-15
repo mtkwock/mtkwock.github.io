@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <br>
+        More space to display things here at some point, just some filler text to hold for the moment
+        <br>
+        Just some things here <br>
+        More things here
+        <br>
+        <br>
+        Indi's Artist Blurb Goes here with special formatting and pretty stuff as well.  Perhaps a photo, perhaps a quick comment.  Perhaps a link back to "Contact Me" or "See my other things"
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+        </div>
+
+        <div class="col-md-10" id="gallery-area">
+            <div ng-repeat="row in vm.entries()" class="gallery-row">
+                <span ng-repeat="image in row">
+                    <div class="gallery-entry">
+                        <img class="lazy gallery-image" src="../../../assets/thumbs/{{image.url}}" alt={{image.title}} width={{image.width}} height={{image.height}}/>
+                        <span class="gallery-overlay">
+                            {{image.title}} <br><br>
+                            {{image.description}}
+                        </span>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

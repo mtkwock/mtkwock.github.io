@@ -1,0 +1,34 @@
+<div class="container bs-docs-container">
+
+    <row>
+        <div data-spy="scroll" class="col-md-9" role="main" data-target="#navbar-blog">
+            <div id="blog-title">The Wonderful Blog of an Artist</div>
+
+            <div class="blog-entry" custom data-ng-repeat="entry in vm.entries()" id={{entry.id}}>
+                <div class="blog-entry-title">{{entry.title}}</div>
+                <div class="blog-entry-body">{{entry.body}}</div>
+            </div>
+
+        </div>
+
+        <div class="col-md-3" role="complimentary">
+            <div id="navbar-blog">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+                    <ul class="nav bs-docs-sidenav" role="tablist">
+                        <li>
+                            <a class="entry-tab" ng-click="focus('#navbar-top')">
+                                <strong>Go to Top</strong>
+                            </a>
+                        </li>
+                        <li ng-repeat="entry in vm.entries()">
+                            <a class="entry-tab" ng-click="focus(entry.href)">{{entry.title}}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </row>
+
+
+
+</div>
