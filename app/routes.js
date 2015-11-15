@@ -36,14 +36,12 @@
                 controllerAs: "vm"
             },
             {
-                name: "commissions",
-                url: "/commissions",
-                template: "<div>Commissions</div>"
-            },
-            {
                 name: "contact",
                 url: "/contact",
-                template: "<div>Contact Me</div>"
+                templateUrl: "../contact/contact.html",
+                controller: "ContactController",
+                controllerAs: "vm"
+
             }
         ];
 

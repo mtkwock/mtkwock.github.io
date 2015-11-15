@@ -13,14 +13,12 @@
             entries: _.memoize(formatted)
         });
 
+        // Deal with window resizes so that the pictures scale to screen
         var w = angular.element($window);
-
         w.bind('resize', function(){
             vm.entries = _.memoize(formatted);
             $scope.$apply();
         });
-
-        $scope.entries = _.memoize(formatted);
     };
 
     function loadJSON(filename, callback) {
@@ -63,13 +61,11 @@
             }
 
             var aspTotal = aspects.reduce(function(a, b){ return a + b; });
-            var widths = aspects.map(function(aspect){
-                return actual * aspect / aspTotal; // Normalize heights by changing widths
-            });
+            var height = actual / aspTotal;
 
             row.forEach(function (img, idx){
-                img.width = widths[idx];
-                img.height = widths[idx].height / aspects[i];
+                img.width = aspects[idx] * height;// widths[idx];
+                img.height = height;
             });
             galEntries.push(row);
         }
