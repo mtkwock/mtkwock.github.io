@@ -27,12 +27,6 @@ div.item {
     align: center;
 }
 
-.carousel{
-    width:170px;
-    height:135px;
-    max-height:240px;
-}
-
 .carousel-inner > .item > img {
    margin: 0 auto;
 }
@@ -118,7 +112,7 @@ div.item {
     cursor: pointer;
     display: table;
     position: absolute;
-    padding-top: 25%;
+    padding-top: 10%;
     font-size: 20px;
     top: 0;
     bottom: 0;
@@ -141,17 +135,53 @@ div.item {
     opacity: 1;
 }
 
+#shop-focus {
+    min-height: 250px;
+}
+
+#focus-carousel {
+    height: 135px;
+    width: 170px;
+}
+
+.shop-item-focus {
+}
+
 .shop-row {
     margin-bottom: 3px;
 }
 
+#shop-gallery {
+    background: rgba(50, 0, 50, 0.1);
+    border-color: rgba(50, 0, 50, 0.5);
+    border-style: solid;
+    border-width: thin;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+    display: inline-block;
+}
+
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.shop-image {
+    border: solid 1px black;
+}
+
 .shop-item{
-    border: 1px solid;
-    margin-right: 0px;
-    padding: 0px 0px 0px 0px;
+    width: 25%;
+    padding-bottom: 5px;
     display: inline-block;
     position: relative;
     text-align: center;
+    vertical-align: top;
 }
 
 .shop-overlay {
@@ -160,13 +190,12 @@ div.item {
     cursor: pointer;
     display: table;
     position: absolute;
-    padding-top: 25%;
-    font-size: 20px;
+    padding-top: 10%;
+    font-size: 18px;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    positon: relative;
     opacity: 0;
     visibility: hidden;
     display: table-cell;

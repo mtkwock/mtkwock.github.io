@@ -1,32 +1,45 @@
 <div class="container">
     <div class="row" id="shop-focus" height="200px">
+        <div class="col-md-1">
+        </div>
         <div class="col-md-3">
-            <div class="carousel slide" id="focusCarousel" data-ride="carousel" data-interval="false">
+            <div class="carousel slide" id="focus-carousel" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
-                    <li ng-repeat="(key, value) in vm.focusedListing()" data-target="#focusCarousel" data-slide-to={{key}}>
-                        {{key}}
-                    </li>
+                    <li class="active" data-target="#focus-carousel" data-slide-to=0></li>
+                    <li ng-repeat="(key, value) in vm.focusedListing().pictureLinks" data-target="#focus-carousel" data-slide-to={{key}} ng-if="key !== 0"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
-                    <div></div>
+                    <div class="item shop-item-focus active">
+                        <img src={{vm.focusedListing().pictureLinks[0]}} class="shop-image active">
+                    </div>
+                    <div class="item shop-item-focus" ng-repeat="(key, url) in vm.focusedListing().pictureLinks" ng-if="key!==0">
+                        <img src={{url}} alt="" class="shop-image">
+                    </div>
                 </div>
             </div>
         </div>
-        {{vm.focusedListing().name}} <br>
-        {{vm.focusedListing().description}}
-    </div>
-    <div class="row" id="shop-gallery">
-        <div class="col-sm-1">
 
+        <div class="col-md-7">
+            <h2>
+                {{vm.focusedListing().name}}
+            </h2>
+            <p>
+                {{vm.focusedListing().description}}
+            </p>
         </div>
-        <div class="col-md-10">
+    </div>
+    <div class="row" id="shop-space">
+        <div class="col-sm-1">
+            Literally empty space to center things
+        </div>
+        <div class="col-md-10" id="shop-gallery">
             <div ng-repeat="item in vm.listings()" class="shop-item">
                 <img class="shop-image" src={{item.pictureLinks[0]}} alt={{item.name}} ng-click="vm.setFocus(item)"/>
                 <span class="shop-overlay" ng-click="vm.setFocus(item)">
                     {{item.name}}
                 </span>
             </div>
-
+            <span class="stretch"></span>
         </div>
     </div>
 </div>
