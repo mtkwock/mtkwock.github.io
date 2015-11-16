@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row" id="shop-focus" height="200px">
+        <div class="col-md-3">
+            <div class="carousel slide" id="focusCarousel" data-ride="carousel" data-interval="false">
+                <ol class="carousel-indicators">
+                    <li ng-repeat="(key, value) in vm.focusedListing()" data-target="#focusCarousel" data-slide-to={{key}}>
+                        {{key}}
+                    </li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        {{vm.focusedListing().name}} <br>
+        {{vm.focusedListing().description}}
+    </div>
+    <div class="row" id="shop-gallery">
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-md-10">
+            <div ng-repeat="item in vm.listings()" class="shop-item">
+                <img class="shop-image" src={{item.pictureLinks[0]}} alt={{item.name}} ng-click="vm.setFocus(item)"/>
+                <span class="shop-overlay" ng-click="vm.setFocus(item)">
+                    {{item.name}}
+                </span>
+            </div>
+
+        </div>
+    </div>
+</div>

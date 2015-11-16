@@ -141,16 +141,54 @@ div.item {
     opacity: 1;
 }
 
+.shop-row {
+    margin-bottom: 3px;
+}
+
+.shop-item{
+    border: 1px solid;
+    margin-right: 0px;
+    padding: 0px 0px 0px 0px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.shop-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    display: table;
+    position: absolute;
+    padding-top: 25%;
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    positon: relative;
+    opacity: 0;
+    visibility: hidden;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+.shop-item:hover .shop-overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
 .entry-tab {
     border-right: solid 0px;
 }
 
 .entry-tab:hover {
     border-right: solid 3px;
-}
-
-.a-n {
-    bottom: 5px;
 }
 
 li.tab {

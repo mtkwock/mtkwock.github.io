@@ -20,7 +20,7 @@
         var vm = this;
         var tabs = [
             { name: 'Gallery',      path: "gallery"},
-            { name: 'For Sale',     path: "products"},
+            { name: 'For Sale',     path: "shop"},
             { name: 'About',        path: "about"},
             { name: 'Contact',      path: "contact"}
         ];

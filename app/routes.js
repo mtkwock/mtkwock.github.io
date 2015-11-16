@@ -20,13 +20,14 @@
                 url: "/gallery",
                 templateUrl: "../gallery/gallery.html",
                 controller: "GalleryController",
-                directive: "gallery",
                 controllerAs: "vm"
             },
             {
-                name: "products",
-                url: "/products",
-                template: "<div>For Sale!</div>"
+                name: "shop",
+                url: "/shop",
+                templateUrl: "../shop/shop.html",
+                controller: "ShopController",
+                controllerAs: "vm"
             },
             {
                 name: "about",
