@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbar-top">
         <ul class="nav navbar-nav">
             <li ng-repeat="tab in vm.tabs" ng-click="vm.changeTab(tab)"
-                ng-class="{'active':vm.currentTab===tab.name}">
+                ng-class="{'active':vm.currentTab===tab.name, 'navtab': true}">
                 <a>{{tab.name}}</a>
             </li>
         </ul>

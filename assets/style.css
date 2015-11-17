@@ -1,5 +1,16 @@
-body: {
+body {
     position: relative;
+}
+
+.block {
+    background-color: rgba(50, 0, 50, 0.1) !important;
+}
+
+.jumbotron {
+}
+
+.navtab {
+    cursor: pointer;
 }
 
 .product img {
@@ -69,8 +80,9 @@ div.item {
 
 .blog-entry {
     position: relative;
-    border-top: 1px solid;
+    border-top: 1px;
     border-radius: 25px;
+    border-top-style: double;
     border-width: medium;
     padding: 30px;
     margin-bottom: 50px;
@@ -88,7 +100,6 @@ div.item {
 }
 
 #gallery-area {
-    background-color: rgba(55, 10, 55, 0.1);
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -152,7 +163,6 @@ div.item {
 }
 
 #shop-gallery {
-    background: rgba(50, 0, 50, 0.1);
     border-color: rgba(50, 0, 50, 0.5);
     border-style: solid;
     border-width: thin;
@@ -214,6 +224,7 @@ div.item {
 
 .entry-tab {
     border-right: solid 0px;
+    cursor: pointer;
 }
 
 .entry-tab:hover {

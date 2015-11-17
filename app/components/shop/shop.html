@@ -2,7 +2,7 @@
     <div class="row" id="shop-focus" height="200px">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 block">
             <div class="carousel slide" id="focus-carousel" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
                     <li class="active" data-target="#focus-carousel" data-slide-to=0></li>
@@ -13,13 +13,13 @@
                         <img src={{vm.focusedListing().pictureLinks[0]}} class="shop-image active">
                     </div>
                     <div class="item shop-item-focus" ng-repeat="(key, url) in vm.focusedListing().pictureLinks" ng-if="key!==0">
-                        <img src={{url}} alt="" class="shop-image">
+                        <img ng-src={{url}} alt="" class="shop-image">
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-7">
+        <div class="col-md-7 block">
             <h2>
                 {{vm.focusedListing().name}}
             </h2>
@@ -32,7 +32,7 @@
         <div class="col-sm-1">
             Literally empty space to center things
         </div>
-        <div class="col-md-10" id="shop-gallery">
+        <div class="col-md-10 block" id="shop-gallery">
             <div ng-repeat="item in vm.listings()" class="shop-item">
                 <img class="shop-image" src={{item.pictureLinks[0]}} alt={{item.name}} ng-click="vm.setFocus(item)"/>
                 <span class="shop-overlay" ng-click="vm.setFocus(item)">
