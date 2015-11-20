@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row" id="shop-focus" height="200px">
+    <div class="row" id="shop-focus">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3 block">
+        <div class="col-md-3 block" id="shop-focus-left">
             <div class="carousel slide" id="focus-carousel" data-ride="carousel" data-interval="false">
                 <ol class="carousel-indicators">
                     <li ng-class="{'active': key===0}" ng-repeat="(key, value) in vm.focusedListing().pictureLinks" data-target="#focus-carousel" data-slide-to={{key}}></li>
@@ -23,13 +23,23 @@
             </div>
         </div>
 
-        <div class="col-md-7 block">
-            <h2>
-                {{vm.focusedListing().name}}
-            </h2>
-            <p>
-                {{vm.focusedListing().description}}
-            </p>
+        <div class="col-md-7 block" id="shop-focus-right">
+            <div id="shop-focus-heading">
+                <h2>
+                    {{vm.focusedListing().name}}
+                </h2>
+                <hr>
+            </div>
+            <div id="shop-focus-description">
+                <p>
+                    {{vm.focusedListing().description}}
+                    <br>
+                    <div id="shop-focus-extra">
+                        <a href={{vm.focusedListing().url}} class="btn btn-primary">See on Etsy</a> for ${{vm.focusedListing().price}}
+                    </div>
+                </p>
+            </div>
+
         </div>
     </div>
     <div class="row" id="shop-space">

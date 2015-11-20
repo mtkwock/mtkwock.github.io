@@ -9,6 +9,10 @@ body {
 .jumbotron {
 }
 
+#brand {
+    cursor: pointer;
+}
+
 .navtab {
     cursor: pointer;
 }
@@ -152,6 +156,19 @@ div.item {
 
 #shop-focus {
     min-height: 250px;
+}
+
+#shop-focus-link {
+    width: 100%;
+    text-align: right;
+}
+
+#shop-focus-left {
+    margin-bottom: 0px;
+}
+
+#shop-focus-right {
+    height: 100%;
 }
 
 #focus-carousel {

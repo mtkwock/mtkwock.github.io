@@ -10,7 +10,6 @@
             {
                 name: "home",
                 url: "/home",
-                //template: "<div>Home</div>",
                 templateUrl: "../home/home.html",
                 controller: "HomeController",
                 controllerAs: "vm"
