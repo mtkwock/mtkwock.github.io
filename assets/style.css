@@ -13,6 +13,10 @@ body {
     cursor: pointer;
 }
 
+.footer {
+    text-align: center;
+}
+
 .product img {
     height: 135px;
     max-height: 135px;

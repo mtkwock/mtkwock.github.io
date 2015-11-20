@@ -5,9 +5,8 @@
 
     function navBar(){
         return {
-            restrict: "EA", // E: Element Attribute
+            restrict: "E", // E: Element Attribute
             replace: true, // Replaces respective element
-            //template: '<b>Hello</b>',
             scope: {},
             templateUrl: '../navbar/navbar.html',
             controller: NavBarController,
